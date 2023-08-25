@@ -128,7 +128,7 @@ body {
   justify-items: center;
   list-style: none;
   z-index: 20;
-  transition: all 0.5s;
+  transition: all 0.3s;
   position: absolute;
   top: 50%;
   left: -300%;
@@ -149,6 +149,14 @@ body {
       grid-template-columns: repeat(3, max-content);
       grid-template-rows: repeat(2, 1fr);
       justify-items: start; } }
+  @media only screen and (max-width: 62.5em) and (max-width: 37.5em) {
+    .nav__list {
+      font-size: 1.9rem;
+      gap: 1rem; } }
+  @media only screen and (max-width: 62.5em) and (max-width: 25em) {
+    .nav__list {
+      grid-template-columns: repeat(2, max-content);
+      grid-template-rows: repeat(2, 1fr); } }
 
 .nav__links:link, .nav__links:visited {
   text-decoration: none;
@@ -161,6 +169,10 @@ body {
   text-transform: uppercase;
   user-select: none;
   transition: all 0.3s; }
+  @media only screen and (max-width: 37.5em) {
+    .nav__links:link, .nav__links:visited {
+      font-size: 1.9rem;
+      padding: 0.6rem 1.2rem 0rem 1.2rem; } }
   .nav__links:link:hover, .nav__links:visited:hover {
     background-color: rgba(255, 255, 255, 0.2); }
 
@@ -170,6 +182,12 @@ body {
     .nav-cb:checked ~ .nav__bg {
       width: 100vw;
       height: 15rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .nav-cb:checked ~ .nav__bg {
+      height: 12rem; } }
+  @media only screen and (max-width: 25em) {
+    .nav-cb:checked ~ .nav__bg {
+      height: 21.5rem; } }
 
 .nav-cb:checked ~ .nav__list {
   left: 50%;
@@ -195,6 +213,9 @@ body {
       top: 2.7rem;
       left: auto;
       right: 2rem; } }
+  @media only screen and (max-width: 25em) {
+    .nav-btn {
+      right: 1rem; } }
   .nav-btn, .nav-btn::before, .nav-btn::after {
     content: "";
     background-color: #fff;
@@ -202,6 +223,10 @@ body {
     width: 4.5rem;
     display: block;
     transition: all 0.2s cubic-bezier(0.45, 0, 0.55, 1); }
+    @media only screen and (max-width: 25em) {
+      .nav-btn, .nav-btn::before, .nav-btn::after {
+        height: 1.6px;
+        width: 3rem; } }
   .nav-btn::before {
     transform: translateY(-1.5rem); }
   .nav-btn::after {
@@ -211,6 +236,11 @@ body {
       transform: translateY(-1.3rem); }
     .nav-btn::after {
       transform: translateY(1.1rem); } }
+  @media only screen and (max-width: 25em) {
+    .nav-btn::before {
+      transform: translateY(-1.1rem); }
+    .nav-btn::after {
+      transform: translateY(0.9rem); } }
 
 .sidebar:hover .nav-btn::before {
   transform: translateY(-1.9rem); }
@@ -224,11 +254,20 @@ body {
   .sidebar:hover .nav-btn::after {
     transform: translateY(1.45rem); } }
 
+@media only screen and (max-width: 25em) {
+  .sidebar:hover .nav-btn::before {
+    transform: translateY(-1.45rem); }
+  .sidebar:hover .nav-btn::after {
+    transform: translateY(1.25rem); } }
+
 .nav-cb:checked ~ .nav-toggle-btn .nav-btn {
   background-color: transparent; }
 
 .nav-cb:checked ~ .nav-toggle-btn .nav-btn::before {
   transform: rotate(315deg) translateX(-2.5px) translateY(1px); }
+  @media only screen and (max-width: 25em) {
+    .nav-cb:checked ~ .nav-toggle-btn .nav-btn::before {
+      transform: rotate(315deg) translateX(-1.5px) translateY(1px); } }
 
 .nav-cb:checked ~ .nav-toggle-btn .nav-btn::after {
   transform: rotate(-315deg); }
