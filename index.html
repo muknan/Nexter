@@ -12,6 +12,11 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js"
+    ></script>
+
     <script defer src="js/script.js"></script>
 
     <title>nexter &mdash; your home, your freedom</title>
@@ -26,10 +31,21 @@
       <div class="nav__bg">&nbsp;</div>
 
       <ul class="nav__list">
-        <li class="nav__items">Features</li>
-        <li class="nav__items">Stories</li>
-        <li class="nav__items">Houses</li>
-        <li class="nav__items">Gallery</li>
+        <li class="nav__items">
+          <a href="#" class="nav__links">Home</a>
+        </li>
+        <li class="nav__items">
+          <a href="#section-features" class="nav__links">Features</a>
+        </li>
+        <li class="nav__items">
+          <a href="#section-story" class="nav__links">Stories</a>
+        </li>
+        <li class="nav__items">
+          <a href="#section-homes" class="nav__links">Houses</a>
+        </li>
+        <li class="nav__items">
+          <a href="#section-gallery" class="nav__links">Gallery</a>
+        </li>
       </ul>
     </div>
     <header class="header">
@@ -79,7 +95,7 @@
         </div>
       </div>
     </div>
-    <section class="features">
+    <section class="features" id="section-features">
       <div class="feature">
         <svg class="feature__icon">
           <use xlink:href="img/sprite.svg#icon-global"></use>
@@ -141,7 +157,7 @@
         </svg>
       </div>
     </section>
-    <div class="story__photos">
+    <div class="story__photos" id="section-story">
       <img
         src="img/story-1.jpeg"
         alt="Couple with new house"
@@ -161,7 +177,7 @@
       </p>
       <button class="btn">Find you own home</button>
     </div>
-    <section class="homes">
+    <section class="homes" id="section-homes">
       <div class="home">
         <img src="img/house-1.jpeg" alt="House 1" class="home__img" />
         <svg class="home__like">
@@ -360,7 +376,7 @@
         <button class="btn home__btn">Contact realtor</button>
       </div>
     </section>
-    <section class="gallery">
+    <section class="gallery" id="section-gallery">
       <figure class="gallery__item gallery__item--1">
         <img src="img/gal-1.jpeg" alt="Gallery photo 1" class="gallery__img" />
       </figure>
@@ -446,16 +462,28 @@
           <a href="#" class="nav__link">Request proposal</a>
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__link">Email</a>
+          <a href="mailto:muk.msi@gmail.com" class="nav__link">Email</a>
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__link">Contact</a>
+          <a href="tel:9029950180" class="nav__link">Contact</a>
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__link">Github</a>
+          <a
+            href="https://github.com/muknan"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="nav__link"
+            >Github</a
+          >
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__link">Twitter</a>
+          <a
+            href="https://twitter.com/_mukuln"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="nav__link"
+            >Twitter</a
+          >
         </li>
       </ul>
       <p class="copyright">

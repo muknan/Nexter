@@ -7,7 +7,8 @@
 
 html {
   font-size: 62.5%;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  scroll-behavior: smooth; }
 
 body {
   font-family: "Nunito", sans-serif;
@@ -103,26 +104,26 @@ body {
   grid-template-rows: max-content;
   gap: 2rem;
   justify-items: center;
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 400;
   list-style: none;
   z-index: 20;
-  color: #54483a;
   margin-left: -20rem;
   transition: all 0.5s;
   position: absolute;
   top: 20rem;
   left: 50%; }
 
-.nav__items {
-  font-size: 2.2rem;
-  cursor: pointer;
+.nav__links:link, .nav__links:visited {
+  text-decoration: none;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  color: #54483a;
+  font-size: 2.1rem;
   display: block;
   padding: 0.6rem 1.2rem;
   text-transform: uppercase;
   user-select: none;
   transition: all 0.3s; }
-  .nav__items:hover {
+  .nav__links:link:hover, .nav__links:visited:hover {
     background-color: rgba(255, 255, 255, 0.2); }
 
 .nav-cb:checked ~ .nav__bg {
@@ -181,7 +182,8 @@ body {
   height: 5rem;
   width: 8rem;
   background-color: transparent;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent; }
 
 .header {
   background-color: #54483a;

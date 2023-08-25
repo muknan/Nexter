@@ -41,11 +41,8 @@
     grid-template-rows: max-content;
     gap: 2rem;
     justify-items: center;
-    font-family: $font-display;
-    font-weight: 400;
     list-style: none;
     z-index: 20;
-    color: $color-grey-dark-1;
     margin-left: -20rem;
     transition: all 0.5s;
     position: absolute;
@@ -53,17 +50,23 @@
     left: 50%;
   }
 
-  &__items {
-    font-size: 2.2rem;
-    cursor: pointer;
-    display: block;
-    padding: 0.6rem 1.2rem;
-    text-transform: uppercase;
-    user-select: none;
-    transition: all 0.3s;
+  &__links {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      font-family: $font-display;
+      font-weight: 400;
+      color: $color-grey-dark-1;
+      font-size: 2.1rem;
+      display: block;
+      padding: 0.6rem 1.2rem;
+      text-transform: uppercase;
+      user-select: none;
+      transition: all 0.3s;
 
-    &:hover {
-      background-color: rgba(#fff, 0.2);
+      &:hover {
+        background-color: rgba(#fff, 0.2);
+      }
     }
   }
 }
@@ -143,4 +146,5 @@
   width: 8rem;
   background-color: transparent;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
