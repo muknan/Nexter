@@ -13,6 +13,10 @@
         rgba($color-primary, 0.5)
       ),
       url(../img/back.jpg);
+
+    @media only screen and (max-width: $bp-large) {
+      grid-row: 4 / 5;
+    }
   }
 
   &__img {
@@ -46,6 +50,10 @@
     grid-column: col-start 5 / full-end;
 
     padding: 6rem 8vw;
+
+    @media only screen and (max-width: $bp-large) {
+      grid-row: 4 / 5;
+    }
   }
 
   &__text {

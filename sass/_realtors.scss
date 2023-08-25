@@ -1,6 +1,9 @@
 .realtors {
   background-color: $color-secondary;
   grid-column: col-start 7 / full-end;
+  @media only screen and (max-width: $bp-large) {
+    grid-row: 2 / 3;
+  }
   padding: 3rem;
 
   display: grid;

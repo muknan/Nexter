@@ -9,6 +9,14 @@
   position: fixed;
   transition: all 0.5s;
 
+  @media only screen and (max-width: $bp-large) {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    height: 6rem;
+    width: 100vw;
+    box-shadow: 0 0.5rem 1rem rgba(#000, 0.1);
+  }
+
   // &::before {
   //   content: "";
   //   background-image: linear-gradient($color-primary, $color-primary);
@@ -34,6 +42,12 @@
     height: 100vh;
     z-index: -1;
     transition: all 0.5s;
+
+    @media only screen and (max-width: $bp-large) {
+      height: 6rem;
+      width: 100vw;
+      box-shadow: 0 0.5rem 1rem rgba(#000, 0.1);
+    }
   }
 
   &__list {
@@ -43,11 +57,23 @@
     justify-items: center;
     list-style: none;
     z-index: 20;
-    margin-left: -20rem;
+    // margin-left: -20rem;
     transition: all 0.5s;
     position: absolute;
-    top: 20rem;
-    left: 50%;
+    top: 50%;
+    left: -300%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(50%, -50%);
+
+    @media only screen and (max-width: $bp-large) {
+      display: flex;
+      align-items: center;
+      top: -50%;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      gap: 4rem;
+    }
   }
 
   &__links {
@@ -72,29 +98,38 @@
 }
 
 .nav-cb:checked ~ .nav__bg {
-  width: 42vh;
-}
+  width: 34rem;
 
-.nav-cb:checked .sidebar::before {
-  width: 20vw;
+  @media only screen and (max-width: $bp-large) {
+    width: 100vw;
+    height: 15rem;
+  }
 }
 
 .nav-cb:checked ~ .nav__list {
-  margin-left: 5rem;
+  left: 50%;
   opacity: 1;
   visibility: visible;
-}
-.nav-toggle-btn {
-  height: 100rem;
-  width: 100rem;
+
+  @media only screen and (max-width: $bp-large) {
+    display: flex;
+    top: 50%;
+    left: 50%;
+  }
 }
 
 .nav-btn {
-  position: relative;
-  top: 2rem;
+  position: absolute;
+  top: 3.2rem;
   left: 1.7rem;
   z-index: 2;
   cursor: pointer;
+
+  @media only screen and (max-width: $bp-large) {
+    top: 2.7rem;
+    left: auto;
+    right: 2rem;
+  }
 
   &,
   &::before,
@@ -114,6 +149,16 @@
   &::after {
     transform: translateY(1.3rem);
   }
+
+  @media only screen and (max-width: $bp-large) {
+    &::before {
+      transform: translateY(-1.3rem);
+    }
+
+    &::after {
+      transform: translateY(1.1rem);
+    }
+  }
 }
 
 .sidebar:hover .nav-btn::before {
@@ -122,6 +167,16 @@
 
 .sidebar:hover .nav-btn::after {
   transform: translateY(1.7rem);
+}
+
+@media only screen and (max-width: $bp-large) {
+  .sidebar:hover .nav-btn::before {
+    transform: translateY(-1.65rem);
+  }
+
+  .sidebar:hover .nav-btn::after {
+    transform: translateY(1.45rem);
+  }
 }
 
 .nav-cb:checked ~ .nav-toggle-btn .nav-btn {
