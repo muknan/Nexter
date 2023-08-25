@@ -212,9 +212,6 @@ body {
     .nav-btn {
       top: 2.7rem;
       left: auto;
-      right: 2rem; } }
-  @media only screen and (max-width: 25em) {
-    .nav-btn {
       right: 1rem; } }
   .nav-btn, .nav-btn::before, .nav-btn::after {
     content: "";
@@ -282,6 +279,13 @@ body {
   background-color: transparent;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent; }
+  @media only screen and (max-width: 62.5em) {
+    .sq {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 6rem;
+      width: 6rem; } }
 
 .header {
   background-color: #54483a;

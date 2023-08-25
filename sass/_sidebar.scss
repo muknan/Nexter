@@ -163,10 +163,6 @@
   @media only screen and (max-width: $bp-large) {
     top: 2.7rem;
     left: auto;
-    right: 2rem;
-  }
-
-  @media only screen and (max-width: $bp-smallest) {
     right: 1rem;
   }
 
@@ -269,4 +265,12 @@
   background-color: transparent;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
+
+  @media only screen and (max-width: $bp-large) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 6rem;
+    width: 6rem;
+  }
 }
