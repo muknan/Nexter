@@ -187,7 +187,7 @@ body {
       height: 12rem; } }
   @media only screen and (max-width: 25em) {
     .nav-cb:checked ~ .nav__bg {
-      height: 21.5rem; } }
+      height: 21rem; } }
 
 .nav-cb:checked ~ .nav__list {
   left: 50%;
