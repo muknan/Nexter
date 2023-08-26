@@ -16,6 +16,11 @@
     grid-row: 8 / 9;
   }
 
+  @media only screen and (max-width: $bp-smallest) {
+    gap: 1rem;
+    padding: 1rem;
+  }
+
   &__item {
     &--1 {
       grid-row: 1 / span 2;

@@ -42,6 +42,7 @@
     height: 100vh;
     z-index: -1;
     transition: all 0.5s;
+    user-select: none;
 
     @media only screen and (max-width: $bp-large) {
       height: 6rem;
@@ -176,6 +177,11 @@
     display: block;
     transition: all 0.2s cubic-bezier(0.45, 0, 0.55, 1);
 
+    @media only screen and (max-width: $bp-small) {
+      height: 1.6px;
+      width: 3.5rem;
+    }
+
     @media only screen and (max-width: $bp-smallest) {
       height: 1.6px;
       width: 3rem;
@@ -200,13 +206,23 @@
     }
   }
 
-  @media only screen and (max-width: $bp-smallest) {
+  @media only screen and (max-width: $bp-small) {
     &::before {
-      transform: translateY(-1.1rem);
+      transform: translateY(-1.3rem);
     }
 
     &::after {
-      transform: translateY(0.9rem);
+      transform: translateY(1.1rem);
+    }
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    &::before {
+      transform: translateY(-1.15rem);
+    }
+
+    &::after {
+      transform: translateY(0.95rem);
     }
   }
 }
@@ -229,13 +245,23 @@
   }
 }
 
-@media only screen and (max-width: $bp-smallest) {
+@media only screen and (max-width: $bp-small) {
   .sidebar:hover .nav-btn::before {
-    transform: translateY(-1.45rem);
+    transform: translateY(-1.6rem);
   }
 
   .sidebar:hover .nav-btn::after {
-    transform: translateY(1.25rem);
+    transform: translateY(1.4rem);
+  }
+}
+
+@media only screen and (max-width: $bp-smallest) {
+  .sidebar:hover .nav-btn::before {
+    transform: translateY(-1.35rem);
+  }
+
+  .sidebar:hover .nav-btn::after {
+    transform: translateY(1.15rem);
   }
 }
 
@@ -245,7 +271,7 @@
 
 .nav-cb:checked ~ .nav-toggle-btn .nav-btn::before {
   transform: rotate(315deg) translateX(-2.5px) translateY(1px);
-  @media only screen and (max-width: $bp-smallest) {
+  @media only screen and (max-width: $bp-small) {
     transform: rotate(315deg) translateX(-1.5px) translateY(1px);
   }
 }
