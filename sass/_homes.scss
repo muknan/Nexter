@@ -46,15 +46,13 @@
     justify-self: end;
     margin: 1rem;
     transition: all 0.2s;
+    -webkit-tap-highlight-color: transparent;
 
-    &:hover {
-      fill: #a5340e;
+    @media (hover: hover) {
+      &:hover {
+        fill: #a5340e;
+      }
     }
-
-    // &:active {
-    //   fill: #a5340e;
-    //   animation: pulse 0.5s;
-    // }
   }
 
   &__name {

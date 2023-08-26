@@ -162,7 +162,7 @@
   cursor: pointer;
 
   @media only screen and (max-width: $bp-large) {
-    top: 2.7rem;
+    top: 2.75rem;
     left: auto;
     right: 1rem;
   }
@@ -172,7 +172,7 @@
   &::after {
     content: "";
     background-color: #fff;
-    height: 2.2px;
+    height: 0.24rem;
     width: 4.5rem;
     display: block;
     transition: all 0.2s cubic-bezier(0.45, 0, 0.55, 1);
@@ -227,15 +227,17 @@
   }
 }
 
-.sidebar:hover .nav-btn::before {
-  transform: translateY(-1.9rem);
+@media (hover: hover) {
+  .sidebar:hover .nav-btn::before {
+    transform: translateY(-1.9rem);
+  }
+
+  .sidebar:hover .nav-btn::after {
+    transform: translateY(1.7rem);
+  }
 }
 
-.sidebar:hover .nav-btn::after {
-  transform: translateY(1.7rem);
-}
-
-@media only screen and (max-width: $bp-large) {
+@media only screen and (max-width: $bp-large) and (hover: hover) {
   .sidebar:hover .nav-btn::before {
     transform: translateY(-1.65rem);
   }
@@ -245,7 +247,7 @@
   }
 }
 
-@media only screen and (max-width: $bp-small) {
+@media only screen and (max-width: $bp-small) and (hover: hover) {
   .sidebar:hover .nav-btn::before {
     transform: translateY(-1.6rem);
   }
@@ -255,7 +257,7 @@
   }
 }
 
-@media only screen and (max-width: $bp-smallest) {
+@media only screen and (max-width: $bp-smallest) and (hover: hover) {
   .sidebar:hover .nav-btn::before {
     transform: translateY(-1.35rem);
   }
